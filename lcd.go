@@ -47,6 +47,7 @@ func (l *LCDDisplay) Init() {
 func (l *LCDDisplay) Clear() {
 	l.write(LCDClearDisplay)
 	l.write(LCDReturnHome)
+	l.currentLine = 0
 }
 
 func (l *LCDDisplay) write(d int) error {
